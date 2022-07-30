@@ -1,3 +1,18 @@
+var input = prompt('Koji ste korisnik(Ana,Stefan,Milan)?');
+    switch(input){
+        case "Ana":
+    document.write("Ime: Ana <br> Studnent: Da <br> Fakultet: Medicinski <br> Radno iskustvo: Ne");
+    break;
+            case "Stefan":
+    document.write("Ime: Stefan <br> Studnent: Ne <br> Fakultet: / <br> Radno iskustvo: Početnik u Web Developmentu(Kompanija Restop)");
+    break;
+            case "Milan":
+    document.write("Ime: Milan <br> Studnent: Da <br> Fakultet: Mašinski <br> Radno iskustvo: Programer na CNC mašini");
+    break;
+        default:
+    document.write("<h1>Niste upisali ime ili ste upisali ime koje ne postoji!!!</h1> Ime: / <br> Studnent: / <br> Fakultet: / <br> Radno iskustvo: /")
+};
+
 function semafor(){
     var boje = document.getElementsByClassName('boje');
 boje[0].style.background = 'red';
@@ -130,9 +145,15 @@ var child3 = document.getElementById('child3');
 var child4 = document.getElementById('child4');
 
 parent.addEventListener('click',doSomething);
-child1.addEventListener('click',doSomething);
-child3.addEventListener('click',doSomething);
+child1.addEventListener('click',doSomething2);
+child3.addEventListener('click',doSomething3);
 
 function doSomething() {
-    child1.style.display = 'block';
+   child1.style.display = 'block';
+}
+function doSomething2() {
+    child2.style.display = 'block';
+}
+function doSomething3() {
+    child4.style.display = 'block';
 }
