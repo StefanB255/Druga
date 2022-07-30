@@ -2,119 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
-    <style>
-        *{
-    text-align: center;
-    font-size: 60px;
-}
-#semafor{
-    width: 300px;
-    height: 630px;
-    border: 2px solid grey;
-    border-radius: 20px;
-    margin: auto;
-}
-.boje{
-    width: 150px;
-    border: 1px solid silver;
-    border-radius: 50%;
-    height: 150px;
-    margin: 45px auto;
-    line-height: 10px;
-}
-#semafor2{
-    width: 300px;
-    height: 630px;
-    border: 2px solid grey;
-    border-radius: 20px;
-    margin: auto;
-}
-.boje2{
-    width: 150px;
-    border: 1px solid silver;
-    border-radius: 50%;
-    height: 150px;
-    margin: 45px auto;
-    line-height: 10px;
-}
-
-#wrapp{
-    width: 70%;
-    height: 50%;
-    margin: 100px auto;
-    border 1px solid grey;
-    border-radius: 10px;
-    text-align: center;
-}
-#current{
-    width: 90%;
-    height: 70%;
-    border: 3px solid black;
-    margin: 15px;
-    
-}
-.thumb{
-    width: 300px;
-    height: 150px;
-    margin: 10px auto;
-}
-#timer{
-    background-color: chocolate;
-    font-size: 60px;
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    line-height: 6.5;
-    color: white;
-    margin: 0 auto;
-    border-radius: 50%;
-}
-form{
-    background-color: #3d7625;
-    width: 80%;
-    margin: 0 auto;
-    display: grid;
-    border-radius: 55px;
-}
-form label{
-    margin: 10px 0;
-    align-items: center;   
-}
-label input, textarea{
-    height: 150px;
-    border: none;
-    border-radius: 10px;
-    vertical-align: middle;
-}
-#sendBtn{
-    width: 500px;
-}
-nav{
-    
-    margin: 0 auto;
-    list-style-type: disclosure-closed;
-}
-nav ul li{
-    text-align: left;
-    justify-content: center;
-    list-style-type: disclosure-closed;
-    cursor: pointer;
-    
-}
-#child1{
-    display: none;
-}
-#child2{
-    display: none;
-}
-#child4{
-    display: none;
-}
-    </style>
+    <link rel="stylesheet" href="Formacija/main.css">
     <title>Semafor</title>
 </head>
 <body>
+  <h1>Nisam se trudio oko stiliziranja jer mi je bilo bitno da "kod" bude dobar.</h1>
+  <br>
+  <a href="#dno">Na dnu stranice sam ti ostavio koji su mi problemi a u KODU imaš komentare šta mi je tačno problem.</a>
+  <br>
+  <hr>
    <h1>Semafori</h1>
     <div id="semafor">
         <div class="boje"></div>
@@ -132,13 +28,13 @@ nav ul li{
     
     <div id="wrapp">
        <h1>Album</h1>
-        <img src="Formacija/img/slika1.jpg" alt="" id="current">
-        <img src="Formacija/img/slika1.jpg" alt="" class="thumb" >
-        <img src="Formacija/img/slika2.jpg" alt="" class="thumb" >
-        <img src="Formacija/img/slika3.jpg" alt="" class="thumb" >
-        <img src="Formacija/img/slika4.jpg" alt="" class="thumb" >
-        <img src="Formacija/img/slika5.jpg" alt="" class="thumb" >
-        <img src="Formacija/img/slika6.jpg" alt="" class="thumb" >
+        <img src="img/slika1.jpg" alt="" id="current">
+        <img src="img/slika1.jpg" alt="" class="thumb" >
+        <img src="img/slika2.jpg" alt="" class="thumb" >
+        <img src="img/slika3.jpg" alt="" class="thumb" >
+        <img src="img/slika4.jpg" alt="" class="thumb" >
+        <img src="img/slika5.jpg" alt="" class="thumb" >
+        <img src="img/slika6.jpg" alt="" class="thumb" >
     </div>
     
     <h1>Sat</h1>
@@ -183,11 +79,13 @@ nav ul li{
         </label>
     </form>
     
-    <nav>
+    <nav> 
+<!--      Problem kod ovoga mi je što ne znam kako da ubacim "class active" i da mi se obrise kad drugi put kliknem pokusavao sam ali nisam uspeo. I kapiram da ne može ovako da se radi da za svaku klasu postavljam posebno "display: block" pa ti ako možeš objasni mi kako da radim i šta-->
+       <h1>OVO MI JE PROBLEM</h1>
         <ul>
             <li id="parent">Laptopovi
             <ul>
-                <li id="child1">Asus
+                <li id="child1" >Asus
                     <ul id="child2">
                         <li id="child3">Brzi
                             <ul >
@@ -201,6 +99,8 @@ nav ul li{
                         </li>
                     </ul>
                 </li>
+                <HR></HR>
+
 <!--
                 <li id="fchild">Lenovo
                     <ul>
@@ -222,148 +122,11 @@ nav ul li{
                 </ul>
             </li>
 -->
+ <h2>Takodje i ovo ispod za imena korisnika npr kad se napiše Ana malim slovima neće da otvori iste podatke???</h2>
+       
         </ul>
     </nav>
-    
-    <script>
-        function semafor(){
-    var boje = document.getElementsByClassName('boje');
-boje[0].style.background = 'red';
-boje[1].style.background = 'grey';
-boje[2].style.background = 'grey';
-
-function changetoyellow(){
-    boje[0].style.background = 'red';
-    boje[1].style.background = 'yellow';
-    boje[2].style.background = 'grey';
-
-}
-function changetogreen(){
-    boje[0].style.background = 'grey';
-    boje[1].style.background = 'grey';
-    boje[2].style.background = 'green';
-}
-var x = setTimeout(changetoyellow,5000);
-var y = setTimeout(changetogreen,8000);
-var start = setInterval(semafor, 11000);
-}
-semafor();
-
-
-function semafor2(){
-    var boje2 = document.getElementsByClassName('boje2');
-boje2[0].style.background = 'red';
-boje2[1].style.background = 'yellow';
-boje2[2].style.background = 'grey';
-
-function changetored(){
-    boje2[0].style.background = 'grey';
-    boje2[1].style.background = 'grey';
-    boje2[2].style.background = 'green';
-}
-function changetoyellow(){
-    boje2[0].style.background = 'red';
-    boje2[1].style.background = 'grey';   
-    boje2[2].style.background = 'grey';
-}
-var x = setTimeout(changetored,5000);
-var y = setTimeout(changetoyellow,8000);
-var start = setInterval(semafor2, 11000);
-}
-semafor2();
-
-
-var current = document.getElementById('current');
-var slike = document.getElementsByClassName('thumb');
-for(i=0;i<slike.length; i++){
-    slike[i].addEventListener('click',display);
-}
-
-function display(){
-    var sl = this.getAttribute('src');
-    current.setAttribute('src',sl);
-}
-
-var timer = document.getElementById('timer');
-var loop;
-
-function Sat(){
-    var sada = new Date();
-    var h = sada.getHours();
-    var m = sada.getMinutes();
-    var s = sada.getSeconds();
-    
-    timer.innerHTML = h+'h:'+m+"m:"+s+"s"
-}
-loop = setInterval(Sat,1000);
-
-
-var ime = document.getElementById('inp1');
-var email1 = document.getElementById('email');
-var msg = document.getElementById('message');
-var send = document.getElementById('sendBtn');
-var xx;
-
-send.addEventListener('click',submit);
-ime.addEventListener('focus',clear);
-email.addEventListener('focus',clear);
-msg.addEventListener('focus',clear);
-
-function submit(){
-    xx = 1;
-    
-    if(ime.value == "") {
-        ime.value = "Ovo polje je obavezno!!!"
-        ime.style.color = 'red';
-        xx = 0;
-    };
-    if(email1.value.indexOf('@gmail.com') == -1){
-        email1.value = 'Vas email mora sadrzati gmail.com';
-        xx = 0;
-    };
-    if(email1.value == "") {
-        email1.value = "Ovo polje je obavezno!!!";
-        email1.style.color = 'red';
-        xx = 0;
-    };
-    if(msg.value == "") {
-        msg.value = "Ovo polje je obavezno!!!";
-        msg.style.color = 'red';
-        xx = 0;
-    };
-    if (xx == 1) {
-    window.location.assign('druga.html');
-};
-};
-
-
-
-function clear(){
-    this.value = "";
-    this.style.color = 'black';
-};
-
-let names = ['Audi RS7','Audi RS6','Audi A5','Audi RS7','Audi A7','BMW','BMW i8','BMW'];
-let obj = {};
-
-for (var i = 0; i < names.length; i++){
-    obj[names[i]] = (obj[names[i]] + 1) || 1;
-}
-console.log(obj);
-
-var parent = document.getElementById('parent');
-var child1 = document.getElementById('child1');
-var child2 = document.getElementById('child2');
-var child3 = document.getElementById('child3');
-var child4 = document.getElementById('child4');
-
-parent.addEventListener('click',doSomething);
-child1.addEventListener('click',doSomething);
-child3.addEventListener('click',doSomething);
-
-function doSomething() {
-    child1.style.display = 'block';
-}    
-    </script>
+    <div id="dno"></div>
+    <script src="Formacija/main.js"></script>
 </body>
 </html>
